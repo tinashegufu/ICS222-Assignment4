@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THEPHY: LogIN</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fav Icon/logo-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <img src="images/logo.png" alt="logo">
+
+        <div class="logo">
+            <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiries.html">Enquiries</a></li>
+            <li class="active"><a href="login.html">LogIn</a></li>
+        </ul>
+    </header>
+    <!--//Header-->
+
+    <!--Page Wrapper-->
+    <div class="page-wrapper">
+        <!--Top-image-->
+
+        <div class="main-block">
+            <div class="heading-block">
+                <h2>LogIn Below...</h2>
+            </div>
+        </div>
+
+        
+          
+        <div class="main-block2">
+            <div class="container">
+            <div id="error_message"></div>
+            <form id="form"  method="POST" action="login.php" onsubmit="return validate();">
+            
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email...">
+
+              <label for="password">Password</label>
+              <input type="password" id="pass" name="pass" placeholder="Your Password...">
+
+        
+              <input name="submitbtn" type="submit" value="LogIn">
+            </form>
+          </div>
+        </div>
+
+        
+    
+    </div>
+    <!--//Page Wrapper-->
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+                <p>This website is a personal project concieved for the purpose of evaluation. 
+                    It was designed as an assignment for ICS 222 - Web Programming Concepts. 
+                    It also serves as a company website for Thephy Motors, a local car repairing and maintenance company.
+                </p>
+                <br>
+                <p>Copyright &copy; 2020 ThephyMotors - Automobiles: pvt</p>    
+                    
+            </div>
+            <div class="footer-section talk">
+                <h2>Talk to Us</h2>
+
+                <p><i class="fa fa-globe"></i> 575 Old Mazowe Road, Westgate, Harare </p>
+                <p><i class="fa fa-phone"></i> +263 773 260 845</p>
+                <p><i class="fa fa-save"></i> info@thephymotors.co.zw</p>                
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div class="footer-mid">
+            <ul class="social-icon">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+                <li><a href="#" class="fa fa-dribbble"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+           </ul>
+      
+        </div>
+
+        <div class="footer-bottom">
+            While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 2020. &reg; All Rights Reserved.
+            &copy; tinashegufu.com | Designed by Tinashe Gufu
+        </div>
+    </footer>
+    <!--//Footer-->
+
+</body>
+</html>

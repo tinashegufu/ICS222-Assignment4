@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THEPHY: Reply Enquiry</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fav Icon/logo-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <img src="images/logo.png" alt="logo">
+
+        <div class="logo">
+            <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+        </div>
+
+        <ul class="nav">
+            <li>Reply Enquiry</li>
+        </ul>
+    </header>
+    <!--//Header-->
+    <br>
+    <br>
+    <div class="main-block2">
+        <div class="container">
+    <form action="reply.php" method="POST">
+
+        <label for="email">Enquiry ID</label>
+        <input type="text" id="id" name="id" placeholder="ID...">
+          
+        <label for="message">Response</label>
+        <textarea id="response" name= "response" placeholder="Write reply..." style="height:100px"></textarea>
+          
+        <input name="submitbtn" type="submit" value="Submit">
+        
+    </form>
+    </div>
+    </div>
+</body>
+</html>

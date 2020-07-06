@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THEPHY: Check Enquiry</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fav Icon/logo-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+   <!--Header-->
+   <header>
+    <img src="images/logo.png" alt="logo">
+
+    <div class="logo">
+        <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+    </div>
+
+    <ul class="nav">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiries.html">Enquiries</a></li>
+        <li><a href="login.html">LogIn</a></li>
+    </ul>
+</header>
+<!--//Header-->
+
+<div class="main-block">
+    <div class="heading-block">
+        <h2>Check on Enquiry Below...</h2>
+    </div>
+</div>
+
+
+  
+<div class="main-block2">
+    <div class="container">
+    <div id="error_message"></div>
+    <form id="form"  method="POST" action="enquirycheck.php" onsubmit="return validate();">
+    
+        <label for="fname">Name</label>
+    <div id="name1">
+      <input type="text" id="name" name="name" placeholder="Your name..">
+  
+    </div>
+      
+      <label for="lname">Number</label>
+      <input type="text" id="number" name="number" placeholder="Your phone number..">
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+  
+      <input name="submitbtn" type="submit" value="Check">
+      
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

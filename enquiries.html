@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THEPHY: Enquiries</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fav Icon/logo-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <img src="images/logo.png" alt="logo">
+
+        <div class="logo">
+            <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="enquiries.html">Enquiries</a></li>
+            <li><a href="login.html">LogIn</a></li>
+        </ul>
+    </header>
+    <!--//Header-->
+
+    <!--Page Wrapper-->
+    <div class="page-wrapper">
+        <!--Top-image-->
+        <div id="section1" class="main-about">
+            <div class="overlay"></div>
+            <div class="main-container">
+                <div class="main-text">
+                     <h1>Enquiries</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="btnbtn" style="width: 100%;">
+            <input type="submit" value="Check My Enquiry" style="background-color: black; margin: auto;" class="btn" onclick="window.location.href='check.html'">
+
+        </div>
+
+        
+        <div class="main-block">
+            <div class="heading-block">
+                <h2>Enquire Below...</h2>
+            </div>
+        </div>
+
+        
+          
+        <div class="main-block2">
+            <div class="container">
+            <div id="error_message"></div>
+            <form id="form"  method="POST" action="contactform-handler.php" onsubmit="return validate();">
+            
+                <label for="fname">Name</label>
+            <div id="name1">
+              <input type="text" id="name" name="name" placeholder="Your name..">
+          
+            </div>
+              
+              <label for="lname">Number</label>
+              <input type="text" id="number" name="number" placeholder="Your phone number..">
+
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+          
+              <label for="message">Enquiry</label>
+              <textarea id="message" name= "message" placeholder="Write something.." style="height:100px"></textarea>
+          
+              <input name="submitbtn" type="submit" value="Submit">
+              <br>
+              <br>
+              <br>
+
+            </form>
+          </div>
+        </div>
+
+
+        
+    
+    </div>
+    <!--//Page Wrapper-->
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text"><span>THEPHY</span> Motors</h1>
+                <p>This website is a personal project concieved for the purpose of evaluation. 
+                    It was designed as an assignment for ICS 222 - Web Programming Concepts. 
+                    It also serves as a company website for Thephy Motors, a local car repairing and maintenance company.
+                </p>
+                <br>
+                <p>Copyright &copy; 2020 ThephyMotors - Automobiles: pvt</p>    
+                    
+            </div>
+            <div class="footer-section talk">
+                <h2>Talk to Us</h2>
+
+                <p><i class="fa fa-globe"></i> 575 Old Mazowe Road, Westgate, Harare </p>
+                <p><i class="fa fa-phone"></i> +263 773 260 845</p>
+                <p><i class="fa fa-save"></i> info@thephymotors.co.zw</p>                
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div class="footer-mid">
+            <ul class="social-icon">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+                <li><a href="#" class="fa fa-dribbble"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+           </ul>
+      
+        </div>
+
+        <div class="footer-bottom">
+            While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 2020. &reg; All Rights Reserved.
+            &copy; tinashegufu.com | Designed by Tinashe Gufu
+        </div>
+    </footer>
+    <!--//Footer-->
+
+
+
+    <script>
+        function validate(){
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var error_message = document.getElementById("error_message");
+    var name1 = document.getElementById("name1");
+    
+    error_message.style.padding = "10px";
+    
+    var text;
+    var letters = /^[a-z]*$/i;
+
+    if (!name.match(letters)) {
+      text="Name cannot contain digits. Name is a text only Field";
+      error_message.innerHTML = text;
+      alert(text);
+      return false;
+  }
+
+    if(name.length < 2){
+        text="Enter more than 1 character for name";
+        error_message.innerHTML = text;
+        alert(text);
+        return false;
+
+    }
+
+    if(number.length < 10){
+      text = "Please Enter valid Phone Number";
+      error_message.innerHTML = text;
+      alert(text);
+      return false;
+    }
+    if(isNaN(number)){
+        text = "Phone Number should be digits only";
+        error_message.innerHTML = text;
+        alert(text);
+        return false;
+      }
+
+    if(email.indexOf("@") == -1 || email.length < 6){
+      text = "Please Enter valid Email";
+      error_message.innerHTML = text;
+      alert(text);
+      return false;
+    }
+    if(message.length <= 10){
+      text = "Please Enter More Than 10 Characters In Enquiry field";
+      error_message.innerHTML = text;
+      alert(text);
+      return false;
+    }
+
+
+    alert("Form Submitted Successfully!");
+    return true;
+    
+}
+    </script>
+</body>
+</html>
